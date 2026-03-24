@@ -593,6 +593,50 @@
             margin-top: 1.5rem;
         }
 
+        /* ===== REVIEWS SECTION ===== */
+        .reviews-section {
+            background: var(--color-gray-900);
+            color: var(--color-white);
+            padding: 8rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .review-quote-icon {
+            font-size: 3rem;
+            color: rgba(255, 255, 255, 0.1);
+            margin-bottom: 2rem;
+            display: block;
+        }
+
+        .review-text {
+            font-family: var(--font-serif);
+            font-size: clamp(1.4rem, 4vw, 1.8rem);
+            line-height: 1.6;
+            font-weight: 300;
+            font-style: italic;
+            margin-bottom: 2.5rem;
+            max-width: 900px;
+            margin: 0 auto 2.5rem;
+        }
+
+        .review-author {
+            font-family: var(--font-alt);
+            font-size: 0.85rem;
+            letter-spacing: 0.4em;
+            text-transform: uppercase;
+            color: var(--color-gray-400);
+        }
+
+        .review-recommends {
+            font-family: var(--font-alt);
+            font-size: 0.7rem;
+            color: var(--color-gray-600);
+            margin-top: 0.5rem;
+            display: block;
+        }
+
         /* ===== CTA / BOOKING FORM ===== */
         .cta-section {
             background: var(--color-black);
@@ -997,6 +1041,26 @@
                         <img src="images/image11.jpg" alt="Project 11" class="work-image">
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="reviews-section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-eyebrow" style="color: var(--color-gray-400);">Kind Words</span>
+                <h2 class="section-title">What Our Clients Say</h2>
+            </div>
+            <div class="review-item reveal">
+                <i class="ri-double-quotes-l review-quote-icon"></i>
+                <p class="review-text">
+                    "I had the most amazing experience with my maternity photo shoot. From start to finish, everything
+                    was so comfortable and professional. Angie made me feel beautiful and confident during such a
+                    special time in my life. The photos came out absolutely stunning and truly captured this moment
+                    perfectly. I will cherish these forever and highly recommend them to any expecting mama!"
+                </p>
+                <div class="review-author">Ona Michelle</div>
+                <span class="review-recommends">Recommends Fotography By Angie</span>
             </div>
         </div>
     </section>
