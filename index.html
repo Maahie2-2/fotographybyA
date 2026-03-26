@@ -196,6 +196,13 @@
             }
         }
 
+        /* Hero Mobile Fix */
+        @media (max-width: 768px) {
+            .hero {
+                background-attachment: scroll !important;
+            }
+        }
+
         /* Desktop Layout (Standard Horizontal) */
         @media (min-width: 769px) {
             .nav-container {
@@ -547,11 +554,17 @@
             }
         }
 
+        .about-image-wrapper {
+            position: relative;
+            width: 100%;
+        }
+
         .about-image {
             width: 100%;
             height: auto;
-            max-height: 500px;
+            max-height: 600px;
             object-fit: cover;
+            display: block;
         }
 
         .about-image-frame {
@@ -559,6 +572,16 @@
             inset: -15px;
             border: 1px solid var(--color-gray-200);
             z-index: -1;
+        }
+
+        @media (max-width: 768px) {
+            .about-image-wrapper {
+                padding: 15px;
+            }
+
+            .about-image-frame {
+                inset: 0;
+            }
         }
 
         .about-content {
@@ -591,6 +614,79 @@
             font-family: var(--font-script);
             font-size: 2rem;
             margin-top: 1.5rem;
+        }
+
+        /* ===== SERVICES SECTION ===== */
+        .services-section {
+            background: var(--color-white);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+        }
+
+        @media (min-width: 768px) {
+            .services-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .service-card {
+            text-align: center;
+            padding: 1rem;
+            transition: all 0.5s var(--transition-luxury);
+        }
+
+        .service-image-wrapper {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 3/4;
+            overflow: hidden;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+        }
+
+        .service-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 1s var(--transition-luxury);
+        }
+
+        .service-card:hover .service-image {
+            transform: scale(1.05);
+        }
+
+        .service-title {
+            font-family: var(--font-serif);
+            font-size: 1.8rem;
+            font-weight: 300;
+            margin-bottom: 1rem;
+            letter-spacing: 0.05em;
+        }
+
+        .service-description {
+            font-family: var(--font-alt);
+            font-size: 0.95rem;
+            color: var(--color-gray-600);
+            line-height: 1.6;
+            max-width: 280px;
+            margin: 0 auto;
+        }
+
+        .service-border {
+            width: 40px;
+            height: 1px;
+            background: var(--color-gray-200);
+            margin: 1.5rem auto;
+            transition: width 0.4s var(--transition-luxury);
+        }
+
+        .service-card:hover .service-border {
+            width: 80px;
+            background: var(--color-black);
         }
 
         /* ===== REVIEWS SECTION ===== */
@@ -897,6 +993,7 @@
             </button>
             <ul class="nav-links" id="nav-menu">
                 <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
                 <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
                 <li><a href="#contact" class="nav-link">Book Now</a></li>
             </ul>
@@ -957,6 +1054,54 @@
                     <img src="images/artist.jpg" alt="Angelina Photographer"
                         class="about-image">
                     <div class="about-image-frame"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services-section" id="services">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-eyebrow">Services</span>
+                <h2 class="section-title">What I Offer</h2>
+            </div>
+
+            <div class="services-grid">
+                <!-- Weddings -->
+                <div class="service-card reveal">
+                    <div class="service-image-wrapper">
+                        <img src="images/service1.jpg" alt="Weddings" class="service-image">
+                    </div>
+                    <h3 class="service-title">Weddings</h3>
+                    <div class="service-border"></div>
+                    <p class="service-description">
+                        Capturing the intimate whispers, the grand celebrations, and every timeless moment of your love story.
+                    </p>
+                </div>
+
+                <!-- Milestones -->
+                <div class="service-card reveal">
+                    <div class="service-image-wrapper">
+                        <img src="images/service3.jpg" alt="Milestones" class="service-image">
+                    </div>
+                    <h3 class="service-title">Milestones</h3>
+                    <div class="service-border"></div>
+                    <p class="service-description">
+                        Marking your special achievements, graduations, and life’s singular moments with artistic portraiture.
+                    </p>
+                </div>
+
+                <!-- Family -->
+                <div class="service-card reveal">
+                    <div class="service-image-wrapper">
+                        <img src="images/service2.jpg" alt="Family" class="service-image">
+                    </div>
+                    <h3 class="service-title">Family</h3>
+                    <div class="service-border"></div>
+                    <p class="service-description">
+                        Freezing genuine smiles, warm hugs, and the unique connection that makes your family story yours.
+                    </p>
                 </div>
             </div>
         </div>
@@ -1117,6 +1262,7 @@
             <div>
                 <h4 class="footer-title">Navigation</h4>
                 <ul class="footer-links">
+                    <li><a href="#services">Services</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#contact">Book Now</a></li>
